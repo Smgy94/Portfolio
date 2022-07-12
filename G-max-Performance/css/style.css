@@ -9,7 +9,7 @@
 }
 
 body {
-  max-width: 1600px;
+  max-width: 2700px;
   margin: 0 auto;
   font-family: "Roboto", sans-serif;
 }
@@ -19,7 +19,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 8vh;
+  min-height: 7vh;
   margin: 0 1vw;
 }
 
@@ -30,17 +30,13 @@ nav {
 }
 
 nav a {
-  color: black;
+  color: rgb(0, 0, 0);
   letter-spacing: 0.5px;
 }
 
 nav a:hover {
   color: rgb(0, 149, 255);
   transition: 0.2s;
-}
-
-nav a:active {
-  color: red;
 }
 
 /********** Burger Menu **********/
@@ -55,15 +51,141 @@ nav a:active {
   transition: all 0.3s ease;
 }
 
+/********** Hero **********/
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 75vh;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(/images/hero-image.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  filter: brightness(90%);
+}
+
+.hero-content {
+  position: relative;
+  color: white;
+  margin-left: 15vw;
+}
+
+.hero-title {
+  font-size: 5rem;
+  font-weight: 600;
+}
+
+.hero-subtitle {
+  font-size: 2rem;
+  font-weight: 200;
+  margin-bottom: 1rem;
+}
+
+/* Social Media Icons */
+.social-media {
+  color: white;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.social-media i {
+  color: black;
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 50%;
+  font-size: 1rem;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /********** Tablet View **********/
 @media screen and (max-width: 1024px) {
   .nav-links {
     width: 55%;
+    z-index: 10;
   }
 }
 
 /********** Mobile View **********/
+/********** Hero Mobile **********/
 @media screen and (max-width: 768px) {
+  .hero {
+    width: 100%;
+    position: relative;
+    height: 50vh;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 32vh;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(/images/hero-image-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top right;
+    filter: brightness(90%);
+  }
+
+  .hero-content {
+    top: 0;
+    position: absolute;
+    color: white;
+    margin-left: 0;
+    background-color: grey;
+    text-align: center;
+    padding: 3rem 0;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Social Media Icons */
+  .social-media {
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .social-media i {
+    color: black;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 50%;
+    font-size: 1rem;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   body {
     overflow: hidden;
   }
@@ -76,14 +198,15 @@ nav a:active {
   .nav-links {
     position: absolute;
     right: 0px;
-    height: 50vh;
-    top: 8vh;
+    height: 100vh;
+    top: 7vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
+    background-color: white;
   }
 
   .nav-links li {
