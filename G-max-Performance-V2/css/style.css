@@ -9,6 +9,8 @@
 }
 
 body {
+  max-width: 1800px;
+  margin: 0 auto;
   font-family: "Roboto", sans-serif;
   background-color: grey;
   overflow-x: hidden;
@@ -32,7 +34,7 @@ a:hover {
 
 header {
   background-color: white;
-  min-height: 10vh;
+  min-height: 7vh;
 }
 
 /* Primary Header */
@@ -51,17 +53,28 @@ header {
 
 .primary-navigation {
   margin-right: 2rem;
+  gap: 2.5rem;
+}
+/* Tablet Size */
+@media (max-width: 55em) {
+  .primary-navigation {
+    white-space: nowrap;
+  }
+  .logo {
+    white-space: nowrap;
+  }
 }
 
+/* Mobile Size */
 @media (max-width: 35em) {
   .primary-navigation {
     position: fixed;
     z-index: 1000;
-    inset: 10vh 0 0 0%;
+    inset: 7vh 0 0 0%;
     margin-right: 0rem;
     flex-direction: column;
     padding: min(10vh, 10rem) 2rem;
-    background: hsl(0 0% 100% / 0.5);
+    background: hsl(0 0% 100% / 1);
     backdrop-filter: blur(2rem);
     text-align: center;
     transform: translateX(100%);
@@ -83,7 +96,7 @@ header {
     width: 2rem;
     border: 0;
     aspect-ratio: 1;
-    top: 4vh;
+    top: 2.5vh;
     right: 2rem;
   }
 
