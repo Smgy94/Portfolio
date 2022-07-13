@@ -11,7 +11,7 @@
 body {
   margin: 0 auto;
   font-family: "Roboto", sans-serif;
-  overflow-x: hidden !important;
+  overflow-x: hidden;
 }
 
 /********** NAV **********/
@@ -84,7 +84,7 @@ nav a:hover {
     width: 100%;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
-    background-color: white;
+    background-color: lightblue;
   }
 
   .nav-links li {
