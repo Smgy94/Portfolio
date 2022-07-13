@@ -11,7 +11,6 @@
 body {
   margin: 0 auto;
   font-family: "Roboto", sans-serif;
-  overflow-x: hidden;
 }
 
 /********** NAV **********/
@@ -21,6 +20,7 @@ nav {
   align-items: center;
   min-height: 8vh;
   border: 1px solid grey;
+  overflow: hidden;
 }
 
 .nav-links {
@@ -68,10 +68,12 @@ nav a:hover {
 
 /********** Mobile View **********/
 @media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
   nav {
     margin: 0;
     justify-content: space-around;
-    overflow: hidden;
   }
 
   .nav-links {
