@@ -11,7 +11,6 @@
 body {
   margin: 0 auto;
   font-family: "Roboto", sans-serif;
-  background-color: rgba(106, 32, 218, 0.238);
   overflow-x: hidden;
 }
 
@@ -25,7 +24,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   min-height: 8vh;
-  background-color: blanchedalmond;
+  border: 1px solid grey;
 }
 
 .nav-links {
@@ -60,6 +59,8 @@ nav a:hover {
   margin: 5px;
   transition: all 0.3s ease;
 }
+
+/********** Hero Section **********/
 
 /********** Tablet View **********/
 @media screen and (max-width: 1024px) {
