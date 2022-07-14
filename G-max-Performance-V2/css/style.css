@@ -9,13 +9,19 @@
 }
 
 :root {
+  --pear: #c9d431;
+  --cadet-blue: #6fa6b2;
+  --grey: #e8eaec;
+  --light-grey: #f2f2f2;
+  --dark-blue: #253c57;
+  --white: #fff;
 }
 
 body {
   max-width: 1800px;
   margin: 0 auto;
   font-family: "Roboto", sans-serif;
-  background-color: grey;
+  background-color: var(--white);
   overflow-x: hidden;
 }
 
@@ -27,16 +33,16 @@ body {
 
 /********** Header **********/
 a {
-  color: black;
+  color: var(--dark-blue);
 }
 
 a:hover {
-  color: #c9d431;
+  color: var(--pear);
   transition: 0.2s;
 }
 
 header {
-  background-color: white;
+  background-color: var(--white);
   min-height: 7vh;
 }
 
@@ -44,6 +50,7 @@ header {
 .logo {
   margin-left: 2rem;
   font-size: clamp(1.5rem, 5vw, 2rem);
+  color: var(--dark-blue);
 }
 
 .primary-header {
@@ -93,15 +100,17 @@ header {
   grid-column: 1 / 2;
   grid-row: 1/2;
   justify-self: end;
+  margin-left: 20vw;
 }
 
 .hero-title {
-  color: white;
+  color: var(--light-grey);
   font-size: clamp(2.5rem, 10vw, 5rem);
+  white-space: nowrap;
 }
 
 .hero-subtitle {
-  color: #c9d431;
+  color: var(--pear);
   font-size: clamp(2rem, 5vw, 5rem);
   font-weight: 300;
 }
@@ -117,25 +126,41 @@ header {
   height: 1rem;
   padding: 1rem;
   border-radius: 50%;
-  color: white;
-  background-color: black;
+  color: var(--light-grey);
+  background-color: var(--dark-blue);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 /********** Tablet Size **********/
-@media (max-width: 55em) {
+@media (max-width: 880px) {
   .primary-navigation {
     white-space: nowrap;
+    background-color: red;
+    gap: 1rem;
   }
   .logo {
     white-space: nowrap;
   }
+
+  .hero {
+    height: 50vh;
+  }
+
+  .hero-title {
+    color: var(--light-grey);
+    font-size: clamp(2.5rem, 10vw, 3rem);
+    white-space: nowrap;
+  }
+
+  .hero-content {
+    margin-left: 10vw;
+  }
 }
 
 /********** Mobile Size **********/
-@media (max-width: 35em) {
+@media (max-width: 560px) {
   .primary-navigation {
     position: fixed;
     z-index: 1000;
@@ -187,6 +212,7 @@ header {
       "image";
     align-items: center;
     justify-items: center;
+    background-color: var(--grey);
   }
 
   .hero::before {
@@ -210,6 +236,7 @@ header {
     grid-row: 1/2;
     justify-self: center;
     text-align: center;
+    margin-left: 0;
   }
 
   .hero-title {
@@ -217,7 +244,7 @@ header {
   }
 
   .hero-subtitle {
-    color: #c9d431;
+    color: var(--pear);
     font-weight: 300;
   }
 
