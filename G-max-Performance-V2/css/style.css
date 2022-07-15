@@ -18,7 +18,7 @@
 }
 
 body {
-  max-width: 1800px;
+  max-width: 2000px;
   margin: 0 auto;
   font-family: "Roboto", sans-serif;
   background-color: var(--white);
@@ -137,7 +137,6 @@ header {
 @media (max-width: 880px) {
   .primary-navigation {
     white-space: nowrap;
-    background-color: red;
     gap: 1rem;
   }
   .logo {
@@ -225,7 +224,7 @@ header {
     background-image: url(../images/hero-image04-mobile.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top;
+    background-position: 0% 20%;
     filter: brightness(100%);
     grid-row: 2/3;
   }
