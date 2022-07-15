@@ -166,6 +166,10 @@ header {
   background-color: var(--pear);
 }
 
+.btn-g-max a:hover {
+  color: var(--dark-blue);
+}
+
 /********** Tablet Size **********/
 @media (max-width: 1024px) {
   .primary-navigation {
