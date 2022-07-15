@@ -133,8 +133,41 @@ header {
   justify-content: center;
 }
 
+/* Buttons */
+
+.btn {
+  width: 22rem;
+  height: 7rem;
+  border: 0;
+  bottom: -3.5rem;
+  font-size: 1.1rem;
+}
+.btn-contact {
+  position: absolute;
+  right: 0;
+  background-color: var(--dark-blue);
+}
+
+.btn-contact:hover {
+  background-color: var(--cadet-blue);
+}
+
+.btn-contact a {
+  color: var(--light-grey);
+}
+
+.btn-g-max {
+  position: absolute;
+  right: 22rem;
+  background-color: var(--cadet-blue);
+}
+
+.btn-g-max:hover {
+  background-color: var(--pear);
+}
+
 /********** Tablet Size **********/
-@media (max-width: 880px) {
+@media (max-width: 1024px) {
   .primary-navigation {
     white-space: nowrap;
     gap: 1rem;
@@ -159,7 +192,7 @@ header {
 }
 
 /********** Mobile Size **********/
-@media (max-width: 560px) {
+@media (max-width: 600px) {
   .primary-navigation {
     position: fixed;
     z-index: 1000;
@@ -252,5 +285,22 @@ header {
     display: flex;
     gap: 1.5rem;
     justify-content: center;
+  }
+
+  .btn {
+    width: 50%;
+    height: 5rem;
+    border: 0;
+    bottom: -3.5rem;
+    font-size: 1.1rem;
+  }
+  .btn-contact {
+    right: 0%;
+    width: 50%;
+  }
+
+  .btn-g-max {
+    right: 50%;
+    width: 50%;
   }
 }
